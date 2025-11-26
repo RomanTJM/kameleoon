@@ -8,8 +8,7 @@ export function calculateConversionRate(conversions: number, visits: number): nu
 export function processData(
   chartData: ChartData,
   selectedVariations: string[],
-  timeRange: 'day' | 'week' | 'month',
-  withBands: boolean = false
+  timeRange: 'day' | 'week' | 'month'
 ): ProcessedDataPoint[] {
   const processed: ProcessedDataPoint[] = [];
 

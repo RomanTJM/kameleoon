@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import { ChartData } from './types';
+import { ChartData, TimeRange, LineStyle } from './types';
 import Chart from './components/Chart/Chart';
-import Controls from './components/Controls/Controls';
 import { getVariationId } from './utils/dataProcessor';
 import data from '../data.json';
 import styles from './App.module.css';
@@ -9,8 +8,8 @@ import styles from './App.module.css';
 function App() {
   const chartData = data as ChartData;
   const [selectedVariations, setSelectedVariations] = useState<string[]>([]);
-  const [timeRange, setTimeRange] = useState<'day' | 'week'>('day');
-  const [lineStyle, setLineStyle] = useState<'line' | 'smooth' | 'area'>('line');
+  const [timeRange, setTimeRange] = useState<TimeRange>('day');
+  const [lineStyle, setLineStyle] = useState<LineStyle>('line');
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [zoomEnabled, setZoomEnabled] = useState(false);
 

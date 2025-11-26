@@ -19,7 +19,7 @@ export default function CustomTooltip({
   payload,
   label,
   chartData,
-  timeRange,
+  timeRange: _timeRange,
   calculateConversionRate,
 }: CustomTooltipProps) {
   if (!active || !payload || !label) {
